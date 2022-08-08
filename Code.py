@@ -5,7 +5,7 @@ import random
 from simple_chalk import chalk
 #make the lists for the answers and the user inputted answers.
 A1 = ["fish", "shark", "whale", "9", "no"]
-A2 = ["WW2", "WW1", "65000000", "23", "No"]
+A2 = ["ww2", "ww1", "65000000", "23", "No"]
 Ui = []
 #Variables
 counter = 0
@@ -38,12 +38,12 @@ def randfunc_2():
   print("Your score is: ", t_score)
   time.sleep(2)
   os.system('clear')
-  func_list.remove(func)
+  func_list_2.remove(func)
 #each time this is used it defines a variable as everything there added together. 
 def score_check():
   global t_score
   #adds all the scores together to make a total.
-  t_score = scores[0] + scores[1] + scores[2] + scores[3] + scores[4]
+  t_score = scores[0] + scores[1] + scores[2] + scores[3] + scores[4] + scores[5] + scores[6] + scores[7] + scores[8] + scores[9]
 #sub programs for 'sea creatures topic'
 def Q1_S():
   global counter, score
@@ -170,7 +170,7 @@ def Q1_H():
     #checks if the answer the user gave has been inputted before
     if Q1_2 not in Ui:
       #checks if answer is correct
-      if Q1_2.lower() == A2[0].lower():
+      if Q1_2.lower() == A2[1].lower():
         print("Congrats,", chalk.green(Q1_2), "is correct!")
         #this boosts the counter and then assigns it to a score variable and then is reset
         counter = counter + 1
@@ -184,6 +184,7 @@ def Q1_H():
         #adds to counter and adds input to list
         counter = counter + 1
         Ui.append(Q1_2)
+        print("Incorrect.")
     else:
       print("""You have already tried this.
 It will therefore not be added to your score""")
@@ -193,7 +194,7 @@ def Q2_H():
     print(f"In what war was {chalk.red(CHALKS[9])} in office?")
     Q2_2 = input("")
     if Q2_2 not in Ui:
-      if Q2_2.lower() == A2[1].lower():
+      if Q2_2.lower() == A2[0].lower():
         print("Congrats,", chalk.green(Q2_2), "is correct!")
         counter = counter + 1
         scores[6] = counter
